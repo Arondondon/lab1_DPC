@@ -11,7 +11,6 @@ from moviepy.editor import VideoFileClip
 
 SAVING_FRAMES_PER_SECOND = 1
 
-
 def format_timedelta(td):
     result = str(td)
     try:
@@ -37,7 +36,6 @@ def from_video_to_frames(video_file):
         frame_duration_formatted = format_timedelta(timedelta(seconds=current_duration)).replace(":", "-")
         frame_filename = os.path.join("D:/PROGRAMMING/py_face_rec/temporary_files/",
                                       f"frame{frame_duration_formatted}.jpg")
-
         video_clip.save_frame(frame_filename, current_duration)
 
 
@@ -141,3 +139,4 @@ Enter other integer to exit from program\n"""))
 
 if __name__ == '__main__':
     main()
+
